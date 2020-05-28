@@ -26,18 +26,24 @@
                       <!-- <a href="/post/1">último post</a> -->
                       <router-link to="/post/1/articulo">Post</router-link>
                     </li>
+                    <li class="nav-item" role="presentation">
+                      <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A RUTA ESTÁTICA -->
+                      <!-- <a href="/post/1">último post</a> -->
+                      <router-link to="administrador/simple">Admin</router-link>
+                    </li>
                 </ul>
         </div>
         </div>
     </nav>
     <!-- ROUTER VIEW QUE CARGARÁ LAS VISTAS (INICIO, SOBRE MÍ, CONTACTO, ETC.) -->
-    <router-view></router-view>
+    <transition name='my-transition'>
+        <router-view></router-view>
+    </transition>
   </div>
   
 </template>
 
 <script>
-
 export default {
 
 }
@@ -55,4 +61,17 @@ export default {
 #menu-v8 a{
   text-shadow: 1px 1px #000;
 }
+
+.my-transition-enter-active, .my-transition-leave-active {
+  transition: .3s;
+}
+ 
+.my-transition-enter-active {
+  transition-delay: .3s;
+}
+ 
+.my-transition-enter, .my-transition-leave-active {
+  opacity: 0
+}
+
 </style>
