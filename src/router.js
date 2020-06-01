@@ -3,7 +3,7 @@ import Router from 'vue-router'
 const Index = () => import('./components/Index')
 const About = () => import('./components/About')
 const Contact = () => import('./components/Contact')
-import Post from './components/Post'
+const Post = () => import('./components/Post')
 import Article from './components/Article'
 import NotFound from './components/NotFound'
 import Admin from './components/Admin'
